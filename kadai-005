@@ -1,0 +1,20 @@
+--テーブル作成--
+CREATE TABLE IF NOT EXISTS products (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(256) NOT NULL,
+    brand VARCHAR(256) NOT NULL,
+    price INT(11) NOT NULL,
+    weight INT(11)
+);
+
+--データベース取得--
+
+SHOW DATABASES;
+
+--テーブル取得--
+
+SHOW TABLES;
+
+--データベース削除--
+
+DROP DATABASE lesson5;
