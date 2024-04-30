@@ -1,0 +1,18 @@
+--データベース作成--
+CREATE DATABASE lesson;
+
+--テーブル作成--
+CREATE TABLE IF NOT EXISTS users (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(256) NOT NULL,
+    furigana VARCHAR(256) NOT NULL,
+    email VARCHAR(256) NOT NULL,
+    age INT(11),
+    address VARCHAR(256)
+);
+
+--50歳以下かつ埼玉県--
+SELECT * FROM users WHERE age <= 50 AND address = '埼玉県';
+
+--福岡県,佐賀県,長崎県,熊本県, 大分県,宮崎県,鹿児島県を検索--
+SELECT * FROM users WHERE address IN ('福岡県','佐賀県','長崎県','熊本県', '大分県','宮崎県','鹿児島県');
